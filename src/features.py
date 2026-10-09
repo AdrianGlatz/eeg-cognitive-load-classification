@@ -33,8 +33,10 @@ ROIS = {
 # EEG frequency bands
 BANDS = {
     "theta": (4, 8),
-    "alpha": (8, 13),
-    "beta": (13, 30)
+    "low_alpha": (8, 10),
+    "high_alpha": (10, 13),
+    "low_beta": (13, 20),
+    "high_beta": (20, 30),
 }
 
 WELCH_SEGMENT_SECONDS = 1.0
