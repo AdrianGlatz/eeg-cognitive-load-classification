@@ -8,10 +8,11 @@ from .features import build_feature_matrix
 TASKS = {
     "zeroBACK": {"event_code": "6021", "label": 0},
     "oneBACK": {"event_code": "6121", "label": 1},
-    "twoBACK": {"event_code": "6221", "label": 2}
+    "twoBACK": {"event_code": "6221", "label": 2},
 }
 
 SESSIONS = ["ses-S1", "ses-S2", "ses-S3"]
+
 
 def build_session_dataset(eeg_dir):
     """Build X and y for one EEG session."""
@@ -35,6 +36,7 @@ def build_session_dataset(eeg_dir):
     y = np.concatenate(y_parts)
 
     return X, y
+
 
 def build_subject_dataset(subject_dir):
     """Build X and y for one EEG subject."""

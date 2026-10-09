@@ -28,14 +28,14 @@ A Logistic Regression classifier is evaluated using 5-fold subject-wise cross-va
 
 ## Results
 
-Accuracy: **0,383**  
-Macro F1: **0.376**
+Accuracy: **38.38%**  
+Macro F1: **37.73%**
 
 Recall per class:
 
-- Low: **40.89%**
-- Medium: **24.78%**
-- High: **49.32%**
+- Low: **41.31%**
+- Medium: **25.25%**
+- High: **48.59%**
 
 High and low cognitive load were easier to distinguish than the medium condition.
 
