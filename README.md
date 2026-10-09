@@ -4,7 +4,7 @@ This project classifies different levels of cognitive load from EEG using bandpo
 
 ## Dataset
 
-The project uses the public COG-BCI dataset with EEG recordings from 29 participants performing N-back tasks:
+The project uses the public [COG-BCI](https://zenodo.org/records/7413650) dataset with EEG recordings from 29 participants performing N-back tasks:
 
 - 0-back → low cognitive load
 - 1-back → medium cognitive load
@@ -28,14 +28,14 @@ A Logistic Regression classifier is evaluated using 5-fold subject-wise cross-va
 
 ## Results
 
-Accuracy: **38.38%**  
-Macro F1: **37.73%**
+Accuracy: **38.67%**  
+Macro F1: **38.02%**
 
 Recall per class:
 
-- Low: **41.31%**
-- Medium: **25.25%**
-- High: **48.59%**
+- Low: **40.58%**
+- Medium: **25.77%**
+- High: **49.65%**
 
 High and low cognitive load were easier to distinguish than the medium condition.
 

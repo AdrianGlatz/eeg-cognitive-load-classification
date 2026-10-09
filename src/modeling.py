@@ -23,6 +23,8 @@ def build_model():
 
 
 def cross_validation_predictions(X, y, groups):
+    """Generate subject-wise cross-validation predictions."""
+
     model = build_model()
     cv = GroupKFold(n_splits=CV_SPLITS)
 

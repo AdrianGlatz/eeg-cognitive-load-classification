@@ -12,17 +12,19 @@ EPOCH_END = 2.0
 def load_and_epoch(file_path, event_code):
     """Load, filter, and epoch EEG data."""
 
-    raw = mne.io.read_raw_eeglab(file_path, preload=True)
+    raw = mne.io.read_raw_eeglab(file_path, preload=False)
 
     events, event_id = mne.events_from_annotations(raw)
 
-    raw_eeg = raw.copy().pick("eeg")
-    raw_eeg.filter(l_freq=LOW_FREQ, h_freq=HIGH_FREQ)
+    raw.pick("eeg")
+    raw.load_data()
+
+    raw.filter(l_freq=LOW_FREQ, h_freq=HIGH_FREQ)
 
     trial_event = event_id[event_code]
 
     epochs = mne.Epochs(
-        raw_eeg,
+        raw,
         events,
         event_id=trial_event,
         tmin=EPOCH_START,
