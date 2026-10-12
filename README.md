@@ -40,3 +40,11 @@ Recall per class:
 High and low cognitive load were easier to distinguish than the medium condition.
 
 Using features from every EEG channel gave only a small improvement over the original coarse ROI features, while increasing training time substantially. Using finer frequency bands with ROI features gave the best result while keeping the feature set small and interpretable.
+
+## How to Run
+
+1. Install dependencies:
+   `pip install -r requirements.txt`
+2. Download the [COG-BCI dataset](https://zenodo.org/records/7413650) and place it in the
+   `data/` directory.
+3. Run `notebooks/03_classification.ipynb`.
